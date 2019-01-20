@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
   window.M.AutoInit();
 });
 
@@ -14,17 +14,21 @@ const showData = (data2) => {
   const dataPoke = data2.pokemon;
   dataPoke.forEach(element => {
     result = containerRoot.innerHTML += `
-      <div>
-        <div class="card">
-          <div class="box">
-            <h2>${element.name}</h2>
-            <div class="img">
-                <img src="${element.img}">
-            </div>
-            <h3>${element.type}</h3>
+          <div class="col s3 card small card-panel">
+          <div class="card-image waves-effect waves-block waves-light">
+          <div class="caja-pokemon">
+            <img class="activator responsive-img" src="${element.img}">
           </div>
-        </div>
-      </div>`
+          </div>
+          <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">${element.name}<i class="material-icons right">add</i></span>
+          <p><a href="#">${element.type}</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">${element.name}<i class="material-icons right">close</i></span>
+            <p class="flow-text">Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>`
   });
   return result;
 }
