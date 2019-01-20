@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded',function(){
+  window.M.AutoInit();
+});
+
 const data = window.POKEMON.pokemon;
 const data2 = window.POKEMON;
 const containerRoot = document.getElementById('root');
@@ -51,7 +55,7 @@ selectType.addEventListener('change', () => {
 
 window.onload = showData(POKEMON);
 
-//ordenar por
+//función que ordena
 
 selectOrder.addEventListener('change', () => {
   let sortBy = selectOrder.value;
