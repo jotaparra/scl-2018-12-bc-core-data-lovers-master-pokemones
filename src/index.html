@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "es">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+<!-- Primera sección donde se puede filtrar por casa -->
+<section class="container">
+    <p>Filtrar por tipo:</p>
+    <!-- Select con opciones que se manejarán desde el DOM -->
+    <select id="pokeType">
+      <option value="0">Seleccionar...</option>
+      <option value="Bug">Bicho</option>
+      <option value="Dragon">Dragón</option>
+      <option value="Grass">Planta</option>
+      <option value="Ground">Tierra</option>
+      <option value="Fighting">Lucha</option>
+      <option value="Rock">Roca</option>
+      <option value="Ice">Hielo</option>
+      <option value="Flying">Volador</option>
+      <option value="Fairy">Hada</option>
+      <option value="Ghost">Fantasma</option>
+      <option value="Electric">Eléctrico</option>
+    </select>
+  </section>
+
+  <!-- Nuestro contenedor de la información jalada de la DATA -->
+  <section id="root" class="container-fluid"></section>
+
+
+    
+    <div id="root"></div>
+    <script src="./data/pokemon/pokemon.js"></script> 
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
