@@ -3,42 +3,47 @@
 window.allPokemon = {
 
   filterType: (data, condition) => {
-  const filteredType = data.filter(element => {
-    return element.type.indexOf(condition) > -1
-  })
-  return filteredType;
- },
+    const filteredType = data.filter(element => {
+      return element.type.indexOf(condition) > -1
+    })
+    return filteredType;
+  },
 
 
- sortData: (data, sortBy) => {
-  // console.log(data, sortOrder); 
+  sortData: (data, sortBy) => {
+    // console.log(data, sortOrder); 
 
-  if (sortBy == 'a-z') {
+    if (sortBy == 'a-z') {
 
-    return data.sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
-      return 0;
-    });
-  }
+      return data.sort((a, b) => {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        return 0;
+      });
+    }
 
-  if (sortBy == 'z-a') {
-    return data.sort((a, b) => {
-      if (a.name < b.name) {
-        return 1;
-      }
-      if (a.name > b.name) {
-        return -1;
-      }
-      return 0;
-    });
+    if (sortBy == 'z-a') {
+      return data.sort((a, b) => {
+        if (a.name < b.name) {
+          return 1;
+        }
+        if (a.name > b.name) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+  },
+
+  computeStats: (filtered) => {
+    return filtered.length;
   }
 }
-}
+
 
 /* 
   users.sort(function(a, b){

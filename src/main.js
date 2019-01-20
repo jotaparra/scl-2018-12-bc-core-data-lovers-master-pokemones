@@ -1,12 +1,13 @@
 const data = window.POKEMON.pokemon;
+const data2 = window.POKEMON;
 const containerRoot = document.getElementById('root');
 const selectType = document.getElementById('pokeType');
 const selectOrder = document.getElementById('orderBy');
 
 //función que muestra
-const showData = (POKEMON) => {
+const showData = (data2) => {
   let result = '';
-  const dataPoke = POKEMON.pokemon;
+  const dataPoke = data2.pokemon;
   dataPoke.forEach(element => {
     result = containerRoot.innerHTML += `
       <div>
@@ -24,12 +25,14 @@ const showData = (POKEMON) => {
   return result;
 }
 
-//función que 
+//función que filtra
 selectType.addEventListener('change', () => {
   let condition = selectType.value;
   let filtered = window.allPokemon.filterType(data, condition);
+  let countType = window.allPokemon.computeStats(filtered);
   // limpio div
   containerRoot.innerHTML = '';
+  containerRoot.innerHTML = `<p>Los pokemones tipo ${condition} son: ${countType} <p/>`;
   filtered.forEach(element => {
     containerRoot.innerHTML += `
     <div>
@@ -69,6 +72,13 @@ selectOrder.addEventListener('change', () => {
       </div>`
   })
 })
+
+//Calcula el total de pokemones del tipo seleccionado
+
+
+
+
+
 
 
 /*document.getElementById('sort').addEventListener('change', (evento) => {
