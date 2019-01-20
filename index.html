@@ -1,51 +1,63 @@
 <!DOCTYPE html>
-<html lang = "es">
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="es">
 
-<!-- Primera sección donde se puede filtrar por casa -->
-<section class="container">
-    <p>Filtrar por tipo:</p>
-    <!-- Select con opciones que se manejarán desde el DOM -->
-    <select id="pokeType">
-      <option value="0">Seleccionar...</option>
-      <option value="Bug">Bicho</option>
-      <option value="Dragon">Dragón</option>
-      <option value="Grass">Planta</option>
-      <option value="Ground">Tierra</option>
-      <option value="Fighting">Lucha</option>
-      <option value="Rock">Roca</option>
-      <option value="Ice">Hielo</option>
-      <option value="Flying">Volador</option>
-      <option value="Fairy">Hada</option>
-      <option value="Ghost">Fantasma</option>
-      <option value="Electric">Eléctrico</option>
-    </select>
-  </section>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
 
-  <!-- Segunda sección donde se puede filtrar por casa -->
-<section class="container">
-  <p>Ordenar por:</p>
+<body>
+
+  <!-- Primera sección donde se puede filtrar por tipo -->
   <!-- Select con opciones que se manejarán desde el DOM -->
-  <select id="orderBy">
-    <option value="ordenar">Ordenar por</option>
-    <option value="a-z">A-Z</option>
-    <option value="z-a">Z-A</option>
-  </select>
-  
+  <main class="container col">
+    <section class="container col s12">
 
-  <!-- Nuestro contenedor de la información jalada de la DATA -->
-  <section id="root" class="container-fluid"></section>
+      <!-- div select -->
+      <div class="row">
+        <div class="col s4">
+          <select id="pokeType">
+            <option value="0" disabled selected>Seleccionar...</option>
+            <option value="Bug">Bicho</option>
+            <option value="Dragon">Dragón</option>
+            <option value="Grass">Planta</option>
+            <option value="Ground">Tierra</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Rock">Roca</option>
+            <option value="Ice">Hielo</option>
+            <option value="Flying">Volador</option>
+            <option value="Fairy">Hada</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Electric">Eléctrico</option>
+          </select>
+          <label>Filtra pokemones por tipo:</label>
+        </div>
+        <!-- div filtrar -->
+        <div class="col s4">
+          <select id="orderBy">
+            <option value="">Ordenar por</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+          </select>
+        </div>
+      </div>
+
+    </section>
 
 
-    
-    <div id="root"></div>
-    <script src="./data/pokemon/pokemon.js"></script> 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <!-- Nuestro contenedor de la información jalada de la DATA -->
+    <div class="row">
+    <section id="root"></section>
+    </div>  
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
 </html>
