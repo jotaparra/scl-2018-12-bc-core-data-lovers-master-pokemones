@@ -14,15 +14,18 @@
 <body>
   <header>
   </header>
-
-  <!-- Primera sección donde se puede filtrar por tipo -->
-  <!-- Select con opciones que se manejarán desde el DOM -->
   <main class="container">
-    <section class="container col s12">
-
+    <section class="col s12">
+      <div class="row">
+        <div class="titulo">
+          <h5 class="center-align">
+            Descubre las características de los pokemones de la región de Kanto
+          </h5>
+        </div>
+      </div>
       <!-- div select -->
       <div class="row">
-        <div class="col s4">
+        <div class="col s12 m4">
           <select id="pokeType">
             <option value="0" disabled selected>Seleccionar...</option>
             <option value="Bug">Bicho</option>
@@ -39,7 +42,7 @@
           </select>
         </div>
         <!-- div filtrar -->
-        <div class="col s4">
+        <div class="col s12 m4 offset-m4 ">
           <select id="orderBy">
             <option value="">Ordenar por</option>
             <option value="a-z">A-Z</option>
@@ -49,13 +52,13 @@
       </div>
 
     </section>
+    <section id="root" class="row">
 
-
-    <!-- Nuestro contenedor de la información jalada de la DATA -->
-    <div class="row">
-      <section class="col s12" id="root"></section>
-    </div>    
+    </section>
   </main>
+  <footer class="valign-wrapper">
+      <p class="grey-text lighten-5">© 2018 Copyright</p>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
