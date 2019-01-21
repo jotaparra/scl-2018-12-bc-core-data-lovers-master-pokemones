@@ -7,7 +7,6 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
@@ -55,25 +54,7 @@
     <!-- Nuestro contenedor de la información jalada de la DATA -->
     <div class="row">
       <section class="col s12" id="root"></section>
-    </div>
-
-    <div class="col s3 card small card-panel">
-        <div class="card-image waves-effect waves-block waves-light">
-        <p>${element.num}
-          </p>  
-          <img class="caja-pokemon" src="${element.img}">
-        </div>
-        <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">${element.name}<i class="material-icons right">add</i></span>
-        <p>${element.type}</p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">${element.name}<i class="material-icons right">close</i></span>
-          <p class="flow-text">Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>`
-
-    
+    </div>    
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./data/pokemon/pokemon.js"></script>
