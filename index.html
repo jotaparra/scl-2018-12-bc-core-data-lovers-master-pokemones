@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <title>Pokekids</title>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -38,7 +38,6 @@
             <option value="Ghost">Fantasma</option>
             <option value="Electric">Eléctrico</option>
           </select>
-          <label>Filtra pokemones por tipo:</label>
         </div>
         <!-- div filtrar -->
         <div class="col s4">
@@ -58,6 +57,23 @@
       <section class="col s12" id="root"></section>
     </div>
 
+    <div class="col s3 card small card-panel">
+        <div class="card-image waves-effect waves-block waves-light">
+        <p>${element.num}
+          </p>  
+          <img class="caja-pokemon" src="${element.img}">
+        </div>
+        <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">${element.name}<i class="material-icons right">add</i></span>
+        <p>${element.type}</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">${element.name}<i class="material-icons right">close</i></span>
+          <p class="flow-text">Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>`
+
+    
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./data/pokemon/pokemon.js"></script>
