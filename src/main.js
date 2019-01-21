@@ -19,18 +19,22 @@ const showData = (data2) => {
             <img class="caja-pokemon activator responsive-img" src="${element.img}">
           </div>
           <div class="card-content">
-          <p>${element.num}</p>
+          <p>N° ${element.num}</p>
           <span class="card-title activator grey-text text-darken-4">${element.name}<i class="material-icons right">add</i></span>
-          <p>${element.type}</p>
+          <p>${element.type[0]} ${element.type[1]}</p>
           </div>
-          <div class="card-reveal">
+          <div class="card-reveal deep-purple lighten-5">
             <span class="card-title grey-text text-darken-4">${element.name}<i class="material-icons right">close</i></span>
-            <p class="flow-text">Here is some more information about this product that is only revealed once clicked on.</p>
+            <p><span class="caracteristicas">Altura:</span> ${element.height}</p>
+            <p><span class="caracteristicas">Peso:</span> ${element.weight}</p>
+            <p><span class="caracteristicas">Debilidades:</span> ${element.weaknesses}</p>
+            <p><span class="caracteristicas">Huevo:</span> ${element.egg}</p>
           </div>
         </div>`
   });
   return result;
 }
+
 
 //función que filtra
 selectType.addEventListener('change', () => {
