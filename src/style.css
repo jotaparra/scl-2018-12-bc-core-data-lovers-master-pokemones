@@ -2,6 +2,10 @@
 background-color: blueviolet;
 } */
 
+body {
+    background-color: #F4F4FE;
+}
+
 header {
     background: url(img/pokemon-background.jpg);
     background-size: cover;
