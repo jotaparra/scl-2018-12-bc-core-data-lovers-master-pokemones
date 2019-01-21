@@ -2,6 +2,24 @@
 background-color: blueviolet;
 } */
 
+header {
+    background: url(img/pokemon-background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    bottom: 0px;
+    width:100%;
+
+}
+
+footer {
+    background-color: #262626;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+  }
 .card {
     border-radius: 20%;
     padding: 2% 4% 2% 4%;
